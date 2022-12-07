@@ -30,7 +30,15 @@ function createPostWithPromise(title){
 }
 
 async function init(){
-    await console.log( createPostWithPromise("Post Three") )
-    await createPostWithPromise("Post Four")
+    await createPostWithPromise("Post Three")
+    createPostWithPromise("Post Four")
     getPosts()
+}
+
+async function fetchUsers(){
+    let request = await fetch("https://jsonplaceholder.typicode.com/users")
+    console.log(request)
+    let response = await request.json()
+    console.log(response)
+    return response
 }

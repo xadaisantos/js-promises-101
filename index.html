@@ -22,7 +22,10 @@
         // createPostWithPromise("Post Three").then(getPosts)
 
         // guarantees getPosts is last
-        // init()
+        init()
+        let dados = fetchUsers().then((x) => { console.log(x) })
+        console.log(dados)
+
     </script>
 </body>
 </html>
